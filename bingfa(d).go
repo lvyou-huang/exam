@@ -21,8 +21,8 @@ func main() {
 
 func work(a *int, ch chan int) {
 	var flag bool = true
-	for ; *a < 10000000; *a++ {
-		for i := 2; i < *a/2; i++ {
+	for ; *a < 1000; *a++ {
+		for i := 2; i <= *a/2; i++ {
 			if *a%i == 0 {
 				flag = false
 			}
