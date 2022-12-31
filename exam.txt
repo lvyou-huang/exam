@@ -1,0 +1,24 @@
+go基础
+(a)
+
+(b)
+原因2/0会抛出错误，然后向上执行defer语句，不会往下继续运行
+修改：
+func main() {
+a := 2
+b := 0
+defer func() {
+	fmt.Println("3/2 =", 3/2)
+	if r := recover(); r = nil {
+		fmt.Println(r)
+	}
+}()
+fmt.Println("2/0=", a/b)
+fmt.Println("3/2 =", 3/2)
+}
+
+并发相关
+(a)
+goroutine 可能会先执行mu.Unlock()，但这时候还没有mu.Lock()，所以报错
+(b)
+
