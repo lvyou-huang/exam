@@ -1,0 +1,14 @@
+(a)
+create table salary
+(
+    id   int auto_increment,
+    name linestring null,
+    job  linestring not null,
+    yeji linestring null,
+    constraint salary_pk
+        primary key (id)
+);
+
+(b)
+主键是用来区分每个数据的，是唯一且不同的，主要用于id
+外键可以用来描述数据，或者数据的属性
